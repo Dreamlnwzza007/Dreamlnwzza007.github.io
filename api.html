@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjZ6aHRkOHl2MW14YW91cmxwZmUzb3g3YjJuZWQxbGZxdnI2bGM0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MMulGOZr71JcULQImW/giphy.webp" alt="">
+    </div>
+    <ul class="menu">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/aboutme.html">About ME</a></li>
+      <li><a href="/api.html">API Method</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="api">
+    <div class="container-api">
+      <div class="api-get">
+        <div class="api-get-left">
+          <img class="api-get-img" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHU4OW93NGN5M2k3ZDNkMDZqbjFucXp5M25lMjB1enkzYXZ4aHlteCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j0vs5H7Kcz3Pm9LRDa/giphy.webp" alt="">
+        </div>
+        <div class="info-get">
+          <li class="sensor1"></li>
+          <li class="sensor2"></li>
+          <li class="sensor3"></li>
+          <li class="sensor4"></li>
+          <li class="sensor5"></li>
+        </div>
+        <div class="api-get-right">
+          <img class="api-get-img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGY3OHFyOWdteGFneGM2anF1azVzNXQwamIzYTVpcWJoeTZ0OTByaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZjbhFnvZMt61JQxvON/giphy.webp" alt="">
+        </div>
+      </div>
+      <div class="api-post">
+        <form onsubmit="event.preventDefault(); submitData();">
+          <div class="api-post-box-name">
+            <p class="text-titleonbox" >NAME</p>
+            <input class="box-input-text" type="text" id="studentId" required placeholder="Enter StudentID">
+          </div>
+          <div class="api-post-box-id">
+            <p class="text-titleonbox" >ID</p>
+            <input class="box-input-text" type="text" id="studentName" required placeholder="Enter name">
+          </div>
+          <div class="api-post-box-sent">
+            <input class="api-post-box-sent-submit" type="submit">
+          </div>
+        </div>
+        </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="foot-text">
+      <h2>@Money doesn’t buy happiness unless you spend it on beer.</h2>
+    </div>
+  </footer>
+
+  <!-- POST -->
+  <script>
+    async function submitData() {
+        // รับข้อมูลจากฟอร์ม
+        const studentId = document.getElementById("studentId").value;
+        const studentName = document.getElementById("studentName").value;
+
+        // สร้างข้อมูลในรูปแบบ JSON
+        const data = {
+            id: studentId,
+            name: studentName
+        };
+
+        // ส่งข้อมูลไปยัง API โดยใช้ fetch
+        try {
+            const response = await fetch("http://206.189.146.138/api/students", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert("ส่งไปแล้วจู้");
+            } else {
+                alert("ส่งบ่ได้เด้ออออ!!!");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("ส่งบ่ได้เด้ออออ!!!");
+        }
+    }
+</script>
+<!-- GET -->
+<script>
+  document.addEventListener('DOMContentLoaded',function (){
+      fetch('http://206.189.146.138/api/sensors')
+      .then(function(response){
+          return response.json()
+      })
+      .then(function(data){
+          console.log(data);
+          const data1 = data.timestamp;
+          const data2 = data.temperature;
+          const data3 = data.humidity;
+          const data4 = data.luxsensor;
+          const data5 = data.motion;
+          document.querySelector('.sensor1').innerHTML = `Timestamp = ${data1}`;
+          document.querySelector('.sensor2').innerHTML = `Temp = ${data2}`;
+          document.querySelector('.sensor3').innerHTML = `Humidity = ${data3}`;
+          document.querySelector('.sensor4').innerHTML = `Luxsersor = ${data4}`;
+          document.querySelector('.sensor5').innerHTML = `Motion = ${data5}`;
+      });
+  });
+          //setTimeout(function(){location.reload();}, 1000);
+  </script>
+
+</body>
+</html>
