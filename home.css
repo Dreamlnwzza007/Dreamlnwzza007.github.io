@@ -78,12 +78,18 @@
     }
     
     & .img-welcome {
-        width: 331.88px;
+        width: 430px;
         height: 400px;
         object-fit: cover;       
     }
     & .img-welcome:hover {
         display: none;
+    }
+    @media screen and (max-width: 450px) {
+        & .img-welcome {
+            width: 322px;
+            height: 400px;
+        }
     }    
     
  }

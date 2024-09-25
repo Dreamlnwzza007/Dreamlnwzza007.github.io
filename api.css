@@ -116,6 +116,10 @@
         display: none;
     } */
     }
+        & .table-th {
+            font-size: 15px;
+            padding: 10px 30px;
+        }
 }
 .api-post {
     display: flex;
