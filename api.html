@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+  <script src="get.js"></script>
   <nav>
     <div class="logo">
         <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjZ6aHRkOHl2MW14YW91cmxwZmUzb3g3YjJuZWQxbGZxdnI2bGM0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MMulGOZr71JcULQImW/giphy.webp" alt="">
@@ -27,11 +28,38 @@
           <img class="api-get-img" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHU4OW93NGN5M2k3ZDNkMDZqbjFucXp5M25lMjB1enkzYXZ4aHlteCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j0vs5H7Kcz3Pm9LRDa/giphy.webp" alt="">
         </div>
         <div class="info-get">
-          <li class="sensor1"></li>
-          <li class="sensor2"></li>
-          <li class="sensor3"></li>
-          <li class="sensor4"></li>
-          <li class="sensor5"></li>
+          <table class="table-sensor" >
+            <tr>
+              <th  class="table-th">Sensor</th>
+              <th  class="table-th">Value</th>
+              <th  class="table-th">Unit</th>
+            </tr>
+            <tr>
+              <td>Timestamp</td>
+              <td class="td-sensor" ><div id="timestamp"></div></td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Temp</td>
+              <td class="td-sensor" ><div id="temperature"></div></td>
+              <td>°C</td>
+            </tr>
+            <tr>
+              <td>Luxsensor</td>
+              <td class="td-sensor" ><div id="luxsensor"></div></td>
+              <td>Lux</td>
+            </tr>
+            <tr>
+              <td>Humidity</td>
+              <td class="td-sensor" ><div id="humidity"></div></td>
+              <td>%RH</td>
+            </tr>
+            <tr>
+              <td>Motion</td>
+              <td class="td-sensor" ><div id="motion"></div></td>
+              <td>-</td>
+            </tr>
+          </table>
         </div>
         <div class="api-get-right">
           <img class="api-get-img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGY3OHFyOWdteGFneGM2anF1azVzNXQwamIzYTVpcWJoeTZ0OTByaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZjbhFnvZMt61JQxvON/giphy.webp" alt="">
@@ -48,7 +76,7 @@
             <input class="box-input-text" type="text" id="studentName" required placeholder="Enter name">
           </div>
           <div class="api-post-box-sent">
-            <input class="api-post-box-sent-submit" type="submit">
+            <input class="api-post-box-sent-submit" type="submit" >
           </div>
         </div>
         </form>
@@ -96,29 +124,5 @@
         }
     }
 </script>
-<!-- GET -->
-<script>
-  document.addEventListener('DOMContentLoaded',function (){
-      fetch('http://206.189.146.138/api/sensors')
-      .then(function(response){
-          return response.json()
-      })
-      .then(function(data){
-          console.log(data);
-          const data1 = data.timestamp;
-          const data2 = data.temperature;
-          const data3 = data.humidity;
-          const data4 = data.luxsensor;
-          const data5 = data.motion;
-          document.querySelector('.sensor1').innerHTML = `Timestamp = ${data1}`;
-          document.querySelector('.sensor2').innerHTML = `Temp = ${data2}`;
-          document.querySelector('.sensor3').innerHTML = `Humidity = ${data3}`;
-          document.querySelector('.sensor4').innerHTML = `Luxsersor = ${data4}`;
-          document.querySelector('.sensor5').innerHTML = `Motion = ${data5}`;
-      });
-  });
-          //setTimeout(function(){location.reload();}, 1000);
-  </script>
-
 </body>
 </html>
