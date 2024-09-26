@@ -100,7 +100,7 @@ nav {
         width: 100%;
         position: absolute;
         top: 0;
-        /* transition: 0.5s; */
+        transition: 0.1s;
     }
     .text-hide:hover{
         background-image: url("/img/scare.jpg");
@@ -109,20 +109,18 @@ nav {
     }
     .text-hide h3{
         width: 100%;
-        font-weight: 500;
         color: #fff;
-        font-size: 15px;
         bottom: 0;
         position: absolute;
         opacity: 0;
-        /* transition: 0.5s; */
+        transition: 0.1s;
     }
     .text-hide:hover h3{
         bottom: 40%;
         opacity: 1;
     }
     /* BOXSLIDE END////////////////////////////////////////////////////////////// */
-    /* fixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+    /* fixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
     & .img-welcome {
       width: 430px;
       height: 400px;
@@ -135,11 +133,8 @@ nav {
     }
   @media screen and (max-width: 1200px) {
     & .img-welcome {
-      width: 322px;
+      width: 300px;
       height: 400px;
-    }
-    & .welcome-to {
-      display: flex;
     }
   }
 }
