@@ -36,7 +36,7 @@ nav {
       }
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
     height: auto;
     padding: 2rem 0;
@@ -131,7 +131,7 @@ nav {
       height: 400px;
       object-fit: cover;
     }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     & .img-welcome {
       width: 300px;
       height: 400px;
@@ -141,11 +141,12 @@ nav {
 .dne {
   height: auto;
   background-color: #515a5a;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   justify-items: center;
   border: 1rem solid black;
-  padding: 50px;
+  padding: 20px;
 
   & .box-dne {
     display: flex;
@@ -195,7 +196,18 @@ nav {
         opacity: 1;
     }
     /* BOXSLIDE END////////////////////////////////////////////////////////////// */
-
+  & .floatbox-dne {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+    & .doublebox-dne {
+      display: flex;
+    }
+      & .img-case {
+        display: flex;
+        margin: 0 50px;
+      }
   & .box-dne img {
     width: 200px;
     height: 200px;
@@ -203,7 +215,7 @@ nav {
     object-fit: cover;
     border: 4px solid rgb(0, 0, 0);
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
   
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -212,12 +224,20 @@ nav {
       font-size: 15px;
       text-align: center;
     }
+      & .floatbox-dne {
+        flex-direction: column;
+      }
+        & .doublebox-dne{
+          justify-content: space-evenly;
+        }
+          & .img-case {
+            margin: 0 4px;
+          } 
     & .box-dne img {
       width: 130px;
       height: 130px;
       margin: 10px;
-    }
-  
+    } 
   }
 }
 
@@ -233,7 +253,7 @@ footer {
   padding: 10px;
   color: white;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     .foot-text {
       font-size: 10px;
     }
