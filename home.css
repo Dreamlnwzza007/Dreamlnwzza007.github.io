@@ -70,19 +70,69 @@ nav {
     margin-bottom: 20px;
   }
   & .welcome-to {
+    font-family: "VT323", monospace;
     background-color: rgb(51, 47, 47);
     border-radius: 20px;
     padding: 10px;
+    width: 300px;
   }
-
-  & .img-welcome {
-    width: 430px;
-    height: 400px;
-    object-fit: cover;
+  & .welcome-text-and-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  & .img-welcome:hover {
-    display: none;
-  }
+  /* Boxslide /////////////////////////////////////////////////////////////  */
+  .todayido{
+    margin: auto;
+    text-align: center;
+    }
+    .box-texthide{
+        /* border-radius: 10px; */
+        position: relative;
+        overflow: hidden;
+    }
+    .box-texthide img{
+        width: 100%;
+    }
+    .text-hide{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        /* transition: 0.5s; */
+    }
+    .text-hide:hover{
+        background-image: url("/img/scare.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    .text-hide h3{
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 15px;
+        bottom: 0;
+        position: absolute;
+        opacity: 0;
+        /* transition: 0.5s; */
+    }
+    .text-hide:hover h3{
+        bottom: 40%;
+        opacity: 1;
+    }
+    /* BOXSLIDE END////////////////////////////////////////////////////////////// */
+    /* fixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+    & .img-welcome {
+      width: 430px;
+      height: 400px;
+      object-fit: cover;
+    }
+    & .img-scare {
+      width: 430px;
+      height: 400px;
+      object-fit: cover;
+    }
   @media screen and (max-width: 1200px) {
     & .img-welcome {
       width: 322px;
@@ -110,8 +160,8 @@ nav {
     color: white;
     font-size: 20px;
     font-family: "VT323", monospace;
-    
   }
+  /* Boxslide /////////////////////////////////////////////////////////////  */
   .todayido{
     margin: auto;
     text-align: center;
@@ -149,7 +199,7 @@ nav {
         bottom: 40%;
         opacity: 1;
     }
-  /* BOXSLIDE END */
+    /* BOXSLIDE END////////////////////////////////////////////////////////////// */
 
   & .box-dne img {
     width: 200px;
@@ -184,7 +234,7 @@ footer {
   text-align: center;
   background-color: black;
   font-size: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "VT323", monospace;
   padding: 10px;
   color: white;
 
