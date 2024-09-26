@@ -60,6 +60,7 @@
     & .box1-2 {
         width: 100%;
         background-color: gray;
+    }
         & .menu-me {
             border: 10px solid dimgray;
             display: flex;
@@ -67,6 +68,7 @@
             align-items: center;
             text-align: center;
             justify-content: space-evenly;
+        }
             & .box-text-slide {
                 height: 52px;
                 font-size: 30px;
@@ -90,10 +92,13 @@
                 
 
             }
-        }
-        @media screen and (max-width: 900px) {
-            width: 100%;
-        }
+            & .box-menu {
+                display: flex;
+                flex-direction: row;
+                column-gap: 10px;
+                padding: 20px;
+                font-family: "VT323", monospace;
+            }
             & .champ-img {
                 width: 80%;
                 height: 600px;
@@ -102,18 +107,14 @@
                 border: 10px solid dimgray;
                 border-radius: 10px;
             }
-            & .box-menu {
-                display: flex;
-                flex-direction: row;
-                column-gap: 10px;
-                padding: 20px;
-                font-family: "VT323", monospace;
-            }
-    }
     @media screen and (max-width: 900px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+         & .box-menu {
+            display: none;
+         }
     }
  }
 
@@ -200,7 +201,7 @@
                 margin: 20px;
             }
             & .pic-coding {
-                width: 500px;
+                width: 400px;
                 height: 350px;
                 margin: 20px;
             }
@@ -213,7 +214,7 @@
                 }
         @media screen and (max-width: 900px) {  
             & .box-title {
-                font-size: 20px;
+                font-size: 16px;
             }
             & .info-box {
                 text-align: center;
@@ -250,12 +251,18 @@
     & .box-contact {
         width: 100%;
         height: auto;
+        background-color: dimgray;
     }
+        & .googlemap {
+            padding: 0px;
+            display: flex;
+        }
         & .berto {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 5px 0;
+            color: white;
         }
         & .pic-contact {
             display: flex;
@@ -264,7 +271,7 @@
             height: auto;
         }
                 & .contack-pix {
-                    margin: 5px 20px;
+                    margin: 5px 40px;
                 }
 
 
