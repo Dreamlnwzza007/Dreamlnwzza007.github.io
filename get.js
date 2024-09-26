@@ -11,5 +11,6 @@ function updateData() {
     document.getElementById('timestamp').textContent = data.timestamp;
   });
 }
-
 setInterval(updateData, 1000); // เรียกใช้ฟังก์ชัน updateData ทุก 1000 มิลลิวินาที (1 วินาที)
+
+// <script src="get.js"></script> วิธีเรียกหา js
