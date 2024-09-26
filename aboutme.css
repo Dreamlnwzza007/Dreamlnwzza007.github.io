@@ -149,6 +149,23 @@
                 color: white;
                 background-color: dimgray;
             }
+            & .bottom01 {
+                color: white;
+                background-color: dimgray;
+                padding: 16px;
+                align-items: center;
+                text-decoration: none;
+                /* width: 100px;
+                height: 50px; */
+                font-size: 15px;
+                border-radius: 10px;
+                transition: 1s;
+            }
+            & .bottom01:hover {
+                background-color: rgb(148, 148, 151);
+                
+
+            }
         }
         @media screen and (max-width: 450px) {
             width: 100%;
@@ -167,32 +184,6 @@
                 column-gap: 10px;
                 padding: 20px;
             }
-            @media screen and (max-width: 450px) {
-                & .box-menu {
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 10px;
-                }
-                & .champ-img {
-                    height: 400px;
-                }
-            }
-                & .bottom01 {
-                    font-size: 20px;
-                    color: white;
-                    background-color: dimgray;
-                    padding-top: 16px;
-                    align-items: center;
-                    text-decoration: none;
-                    width: 100px;
-                    height: 50px;
-                    border-radius: 10px;
-
-                }
-                & .bottom01:hover {
-                    background-color: rgb(148, 148, 151);
-
-                }
         /* background-color: brown; */
     }
     @media screen and (max-width: 450px) {
@@ -242,6 +233,7 @@
                 padding: 5px 10px;
                 background-color: dimgray;
                 border-radius: 15px;
+                font-family: monospace;
             }
         & .info-box {
             display: flex;
