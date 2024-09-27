@@ -1,0 +1,35 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API GET</title>
+</head>
+
+<script>
+document.addEventListener('DOMContentLoaded',function (){
+    fetch('http://206.189.146.138/api/sensors')
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data);
+        const data1 = data.timestamp;
+        const data2 = data.temperature;
+        const data3 = data.humidity;
+        const data4 = data.luxsensor;
+        const data5 = data.motion;
+        document.querySelector('.api1').innerHTML = `TIMESTAMP = ${data1}`;
+        document.querySelector('.api2').innerHTML = `TEMP = ${data2}`;
+        document.querySelector('.api3').innerHTML = `HUMIDITY = ${data3}`;
+        document.querySelector('.api4').innerHTML = `LUXSENSOR = ${data4}`;
+        document.querySelector('.api5').innerHTML = `MOTION = ${data5}`;
+    });
+});
+</script>
+
+<body>
+<h1 class="api1">Hi</h1>
+<h1 class="api2">Hi</h1>
+<h1 class="api3">Hi</h1>
+<h1 class="api4">Hi</h1>
+<h1 class="api5">Hi</h1>
+<!-- `Time ${timestame} s ` -->
+</body>
+</html>
