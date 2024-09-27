@@ -10,7 +10,7 @@ fetch("https://206.189.146.138/api/students", {
     // Adding body or contents to send 
     body: JSON.stringify({ 
         // order: "7", 
-        id: "", 
+        id: "Punyaphon Patikham", 
         name: "", 
         // status: "Posted", 
     }), 
@@ -26,4 +26,4 @@ fetch("https://206.189.146.138/api/students", {
   
 // Displaying results to console 
 .then(json => console.log(json)); 
-// 6501075520104 EKKALAK SAMRUENG
+// 6501075520104 EKKALAK SAMRUENGPunyaphon Patikham

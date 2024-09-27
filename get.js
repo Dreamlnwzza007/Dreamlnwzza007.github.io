@@ -12,4 +12,4 @@ function updateData() {
 }
 setInterval(updateData, 1000); // เรียกใช้ฟังก์ชัน updateData ทุก 1000 มิลลิวินาที (1 วินาที)
 
-// <script src="get.js"></script> วิธีเรียกหา js
+// <script src="ตั้งชื่อไฟล์ว่าอะไรใส่คำนั้นในนี้ตามด้วย.js"></script> เอาไปตั้งใต้ Body ใข้ link หาไฟล์นี้ js
