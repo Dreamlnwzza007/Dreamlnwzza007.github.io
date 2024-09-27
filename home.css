@@ -163,7 +163,7 @@ nav {
     text-align: center;
     }
     .box-texthide{
-        border-radius: 10px;
+        /* border-radius: 10px; */
         position: relative;
         overflow: hidden;
     }
@@ -173,10 +173,11 @@ nav {
     .text-hide{
         background: transparent;
         height: 100%;
-        width: 100%;
+        width: 66.7%;
         position: absolute;
         top: 0;
         transition: 0.5s;
+        margin: 0 50px;
     }
     .text-hide:hover{
         background: rgba(107, 93, 93, 0.9);
@@ -195,6 +196,12 @@ nav {
         bottom: 40%;
         opacity: 1;
     }
+    @media screen and (max-width: 900px) {
+      .text-hide {
+        width: 100%;
+        margin: 0 0px;
+      }
+    }
     /* BOXSLIDE END////////////////////////////////////////////////////////////// */
   & .floatbox-dne {
     display: flex;
@@ -211,7 +218,6 @@ nav {
   & .box-dne img {
     width: 200px;
     height: 200px;
-    margin: 10px;
     object-fit: cover;
     border: 4px solid rgb(0, 0, 0);
   }
@@ -219,7 +225,6 @@ nav {
   
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-
     & .box-dne {
       font-size: 15px;
       text-align: center;
@@ -231,12 +236,12 @@ nav {
           justify-content: space-evenly;
         }
           & .img-case {
-            margin: 0 4px;
+            margin: 0 0px;
           } 
     & .box-dne img {
       width: 130px;
       height: 130px;
-      margin: 10px;
+      /* margin: 10px; */
     } 
   }
 }

@@ -249,6 +249,9 @@
                             
         }
     & .box-contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         width: 100%;
         height: auto;
         background-color: dimgray;
@@ -256,6 +259,9 @@
         & .googlemap {
             padding: 0px;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         & .berto {
             display: flex;

@@ -1,6 +1,6 @@
 function updateData() {
   // แทนที่ด้วยโค้ดสำหรับดึงข้อมูลของคุณ
-  fetch('https://jsonplaceholder.typicode.com/users')
+  fetch('http://206.189.146.138/api/sensors')
   .then(response => response.json())
   .then(data => {
     document.getElementById('temperature').textContent = data.temperature.toFixed(2);
